@@ -1,31 +1,78 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Spectacle de l’Union musicale de Lanaudière</title>
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cours de dessin</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
-<body>
 
-<div class="container">
-  <h1>Concert acoustique</h1>
+<body class="item-bg bg-right bg-dessin">
 
-  <p>
-   Plongez dans l’univers des musiques de films inoubliables avec cette harmonie de cuivres et de percussions composée d’une trentaine de musiciens et musiciennes passionnés. Un moment musical vibrant vous attend dans la magnifique église de Sainte-Béatrix, dont l’acoustique exceptionnelle met en valeur chaque instrument.
+<!-- HEADER -->
+<div class="site-header">
+  <h1>Au Coeur de Sainte-Béatrix</h1>
 
-Venez seul, en couple, entre amis ou en famille — un spectacle qui saura toucher toutes les générations !
-  </p>
+  <button class="hamburger" onclick="toggleMenu()">☰</button>
 
-  <h2>Vos coordonnées</h2>
+  <nav class="main-menu" id="mainMenu">
+    <a href="index.html">Accueil</a>
+    <a href="programmation.html">Programmation</a>
+  </nav>
+</div>
 
-  <!-- Intégrer ton Google Form -->
-  <iframe src="https://docs.google.com/forms/d/e/TON_FORMULAIRE/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
+<!-- CONTENU -->
+<div class="item-container">
+
+  <div class="item-date">
+    Dimnche<br>
+    15 mars et 3 mai, de 13 h à 17 h
+  </div>
+
+  <div class="item-title">Café Ludique</div>
+
+  <div class="item-subtitle"></div>
+
+  <div class="item-section-title">
+    
+  </div>
+
+  <div class="item-paragraph">
+    Et si on retrouvait l’esprit des dimanches d’autrefois ? Ce moment où l’on prenait le temps de se rassembler, de jaser et de s’amuser en famille, entre amis… ou de créer de nouveaux liens. <br>Le Café ludique vous invite à un après-midi convivial dédié aux jeux de société et au plaisir  d’être ensemble. Venez jouer, rire, découvrir — ou simplement rencontrer des membres de notre communauté dans une ambiance chaleureuse.
+<br>Des jeux seront disponibles sur place, mais vous pouvez aussi apporter vos préférés !
+
+  </div>
+
+  <div class="item-highlight">
+    Activité gratuite pour tous
+  </div>
+
+  <div class="item-small">
+    
+  </div>
+
+  <!-- FORMULAIRE -->
+  <div class="item-form-wrapper">
+    <iframe 
+      src="https://docs.google.com/forms/d/e/1FAIpQLScOywKhsYaACZu44ndW2ogPMYKDyf7R8lOSERinpRhz8GnApg/viewform?usp=header"
+      width="100%"
+      height="1400"
+      style="border:none; overflow:hidden;"
+      scrolling="no">
+    </iframe>
+  </div>
 
 </div>
 
-<footer>
-  © 2026 OBNL De L’Église
-</footer>
+<!-- SCRIPT À LA FIN -->
+<script>
+function toggleMenu() {
+  document.getElementById("mainMenu").classList.toggle("show");
+}
+</script>
 
 </body>
 </html>
