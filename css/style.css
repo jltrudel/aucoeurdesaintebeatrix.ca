@@ -18,20 +18,20 @@ body {
 }
 
 /* =========================================
-   BANDEAU GLOBAL
+   HEADER GLOBAL
 ========================================= */
 
 .site-header {
-  position: relative;
   height: 70px;
   background: rgba(212,197,255,0.95);
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   z-index: 1000;
 }
 
-.site-header h1 {
+.site-title {
   font-size: 1.2rem;
   margin: 0;
   color: #001f3d;
@@ -48,11 +48,11 @@ body {
 
 .main-menu a {
   text-decoration: none;
-  color: white;
+  color: #001f3d;
   font-weight: 600;
 }
 
-/* BOUTON HAMBURGER */
+/* HAMBURGER */
 
 .hamburger {
   display: none;
@@ -66,35 +66,39 @@ body {
 }
 
 /* =========================================
-   MENU MOBILE
+   HERO ACCUEIL
 ========================================= */
 
-@media (max-width: 768px) {
+.hero {
+  height: calc(100dvh - 70px);
+  background: url("../images/hero.png") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .main-menu {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 100%;
-    background: rgba(212,197,255,0.98);
-    padding: 1rem 0;
-    
-    text-align: center;
-  }
+/* Bloc blanc derrière logo */
 
-  .main-menu.show {
-    display: flex;
-  }
+.hero-content {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .hamburger {
-    display: block;
-  }
+/* LOGO ROND */
+
+.hero-logo {
+  width: 800px;
+  max-width: 90%;
+  height: auto;
+  display: block;
 }
 
 /* =========================================
-   PAGE ITEM – TYPOGRAPHIE
+   PAGES ITEM TYPO
 ========================================= */
 
 .item-container {
@@ -108,136 +112,12 @@ body {
   font-family: 'Anton', sans-serif;
   font-size: 3rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  line-height: 2.8rem;
-  margin-bottom: 0.5rem;
   color: #e94b3c;
-}
-
-.item-subtitle {
-  font-family: 'Anton', sans-serif;
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-  color: #e94b3c;
-}
-
-.item-date {
-  font-size: 1.1rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  color: #e94b3c;
-}
-
-.item-section-title {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
 }
 
 .item-paragraph {
   font-family: 'Lora', serif;
-  font-weight: 400;
   line-height: 1.6;
-  margin-bottom: 1rem;
-}
-
-.item-highlight {
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.item-small {
-  font-size: 0.9rem;
-  color: #666;
-}
-
-/* =========================================
-   HERO LOGO CENTRAL
-========================================= */
-
-.hero-logo {
-  height: calc(100vh - 140px);
-  background: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo-central {
-  width: 600px;
-  filter: drop-shadow(0 0 600px rgba(0, 31, 61, 0.35));
-}
-
-/* =========================================
-   HERO SLIDER
-========================================= */
-
-.hero {
-  position: relative;
-  height: calc(100vh - 70px);
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-}
-
-.hero-slide {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  animation: fadeSlider 20s infinite;
-}
-
-.slide1 { background-image: url("../images/hero0.jpg"); animation-delay: 0s; }
-.slide2 { background-image: url("../images/hero2.jpg"); animation-delay: 5s; }
-.slide3 { background-image: url("../images/hero3.jpg"); animation-delay: 10s; }
-.slide4 { background-image: url("../images/hero4.jpg"); animation-delay: 15s; }
-
-@keyframes fadeSlider {
-  0%   { opacity: 0; }
-  5%   { opacity: 1; }
-  35%  { opacity: 1; }
-  40%  { opacity: 0; }
-  100% { opacity: 0; }
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.4);
-  z-index: 1;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-}
-
-.hero h1 {
-  font-size: 3rem;
-}
-
-/* =========================================
-   PROGRAMMATION
-========================================= */
-
-.container-desktop {
-
-  margin-top: -2px;
-  z-index: -2;
-}
-
-.container-desktop img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 65%;
 }
 
 /* =========================================
@@ -250,48 +130,19 @@ body {
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   z-index: 10;
-  box-shadow:
-    0 0 25px rgba(255,255,255,0.6),
-    0 0 50px rgba(255,255,255,0.3);
-  animation: haloPulse 2.5s infinite ease-in-out;
-}
-
-@keyframes haloPulse {
-  0%   { box-shadow: 0 0 20px rgba(255,255,255,0.5),
-                       0 0 40px rgba(255,255,255,0.2); }
-  50%  { box-shadow: 0 0 35px rgba(255,255,255,0.9),
-                       0 0 70px rgba(255,255,255,0.4); }
-  100% { box-shadow: 0 0 20px rgba(255,255,255,0.5),
-                       0 0 40px rgba(255,255,255,0.2); }
-}
-
-.pastille::after {
-  content: "";
-  position: absolute;
-  inset: -8px;
-  border-radius: 50%;
-  border: 2px solid rgba(255,255,255,0.8);
-  animation: ringPulse 2.2s infinite;
-}
-
-@keyframes ringPulse {
-  0% { transform: scale(0.8); opacity: 1; }
-  100% { transform: scale(1.6); opacity: 0; }
 }
 
 /* =========================================
-   FOOTER STANDARD
+   FOOTER
 ========================================= */
 
-footer {
+.footer-home {
   text-align: center;
-  padding: 2rem;
-  background: #eee;
+  padding: 1.5rem;
+  background: #e94b3c;
+  color: white;
+  font-size: 0.9rem;
 }
-
-/* =========================================
-   FOOTER PROGRAMMATION
-========================================= */
 
 .footer-programmation {
   background-color: #e94b3c;
@@ -299,53 +150,35 @@ footer {
   padding: 40px 20px;
   text-align: center;
 }
-/* =========================
-   FOOTER MOBILE
-========================= */
+
+/* =========================================
+   RESPONSIVE
+========================================= */
 
 @media (max-width: 768px) {
 
-  .footer-programmation {
-    padding: 1.5rem;
-    font-size: 0.85rem;
-    line-height: 1.4;
+  .main-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background: rgba(212,197,255,0.98);
+    padding: 1rem 0;
+    text-align: center;
   }
 
-  .footer-programmation b {
+  .main-menu.show {
+    display: flex;
+  }
+
+  .hamburger {
     display: block;
-    margin-bottom: 0.5rem;
-    font-size: 0.9rem;
   }
 
-}
-.site-header {
-  position: relative;
-  z-index: 1000;
-}
-
-/* =========================
-   MOBILE WRAPPER SOLIDAIRE
-========================= */
-
-.image-wrapper-mobile {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 2 / 3; /* adapte au ratio réel de hero5 */
-  max-height: calc(100vh - 70px);
-  margin: 0 auto;
-}
-
-.image-wrapper-mobile img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Pastilles mobile plus grosses */
-@media (max-width: 768px) {
-
-  .pastille {
-    width: 7%;
+  .hero-logo {
+    width: 520px;
   }
 
 }
