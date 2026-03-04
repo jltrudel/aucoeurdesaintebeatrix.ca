@@ -131,7 +131,27 @@ body {
   border-radius: 50%;
   z-index: 10;
 }
+   .pastille {
+  position: absolute;
+  width: 3.5%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  z-index: 10;
+}
 
+.pastille::after {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.8);
+  animation: ringPulse 2.2s infinite;
+}
+
+@keyframes ringPulse {
+  0%   { transform: scale(0.8); opacity: 1; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
 /* =========================================
    FOOTER
 ========================================= */
@@ -180,26 +200,6 @@ body {
   .hero-logo {
     width: 520px;
   }
-   .pastille {
-  position: absolute;
-  width: 3.5%;
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  z-index: 10;
-}
 
-.pastille::after {
-  content: "";
-  position: absolute;
-  inset: -8px;
-  border-radius: 50%;
-  border: 2px solid rgba(255,255,255,0.8);
-  animation: ringPulse 2.2s infinite;
-}
-
-@keyframes ringPulse {
-  0%   { transform: scale(0.8); opacity: 1; }
-  100% { transform: scale(1.6); opacity: 0; }
-}
 
 }
