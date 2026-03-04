@@ -18,12 +18,12 @@ body {
 }
 
 /* =========================================
-   HEADER GLOBAL
+   HEADER
 ========================================= */
 
 .site-header {
   height: 70px;
-  background: rgba(212,197,255,0.95);
+  background: rgba(0, 0, 0, 0.95);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,13 +31,43 @@ body {
   z-index: 1000;
 }
 
-.site-title {
+.site-header h1 {
   font-size: 1.2rem;
   margin: 0;
-  color: #001f3d;
+  color: #ffffff;
 }
 
-/* MENU DESKTOP */
+/* =========================================
+   HERO ACCUEIL
+========================================= */
+
+.hero {
+  height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Bloc blanc derrière logo */
+
+.hero-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* LOGO */
+
+.hero-logo {
+  width: 750px;
+  max-width: 85%;
+  height: auto;
+}
+
+/* MENU */
 
 .main-menu {
   position: absolute;
@@ -48,7 +78,7 @@ body {
 
 .main-menu a {
   text-decoration: none;
-  color: #001f3d;
+  color: #fefeff;
   font-weight: 600;
 }
 
@@ -62,43 +92,11 @@ body {
   border: none;
   font-size: 1.8rem;
   cursor: pointer;
-  color: #001f3d;
-}
+    color: #ebf1f6;
 
+}
 /* =========================================
-   HERO ACCUEIL
-========================================= */
-
-.hero {
-  height: calc(100dvh - 70px);
-  background: url("../images/hero.png") center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Bloc blanc derrière logo */
-
-.hero-content {
-  background: white;
-  padding: 2.5rem;
-  border-radius: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* LOGO ROND */
-
-.hero-logo {
-  width: 800px;
-  max-width: 90%;
-  height: auto;
-  display: block;
-}
-
-/* =========================================
-   PAGES ITEM TYPO
+   PAGE ITEM – TYPOGRAPHIE
 ========================================= */
 
 .item-container {
@@ -112,16 +110,76 @@ body {
   font-family: 'Anton', sans-serif;
   font-size: 3rem;
   text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 3.2rem;
+  margin-bottom: .5rem;
   color: #e94b3c;
+}
+
+.item-subtitle {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #e94b3c;
+}
+
+.item-date {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #e94b3c;
+}
+
+.item-section-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .item-paragraph {
   font-family: 'Lora', serif;
   line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.item-highlight {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.item-small {
+  font-size: 0.9rem;
+  color: #666;
+}
+/* =========================================
+   PROGRAMMATION WRAPPERS
+========================================= */
+
+.program-landscape,
+.program-portrait {
+  height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* image wrapper */
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1600px;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* =========================================
-   PASTILLES PROGRAMMATION
+   PASTILLES
 ========================================= */
 
 .pastille {
@@ -131,13 +189,8 @@ body {
   border-radius: 50%;
   z-index: 10;
 }
-   .pastille {
-  position: absolute;
-  width: 3.5%;
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  z-index: 10;
-}
+
+/* halo */
 
 .pastille::after {
   content: "";
@@ -152,27 +205,84 @@ body {
   0%   { transform: scale(0.8); opacity: 1; }
   100% { transform: scale(1.6); opacity: 0; }
 }
+
+/* =========================================
+   COULEURS
+========================================= */
+
+.c1 { background:#e94b3c; }
+.c2 { background:#cb6ce6; }
+.c3 { background:#9dd241; }
+.c4 { background:#5cc4e2; }
+.c5 { background:#d4c5ff; }
+.c6 { background:#cb6ce6; }
+
 /* =========================================
    FOOTER
 ========================================= */
 
-.footer-home {
-  text-align: center;
-  padding: 1.5rem;
-  background: #e94b3c;
-  color: white;
-  font-size: 0.9rem;
-}
-
 .footer-programmation {
-  background-color: #e94b3c;
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
+  background:#e94b3c;
+  color:white;
+  padding:2rem;
+  text-align:center;
 }
 
 /* =========================================
-   RESPONSIVE
+   ORIENTATION
+========================================= */
+
+/* portrait = mobile vertical + ipad vertical */
+
+@media (orientation: portrait) {
+
+  .program-landscape {
+    display: none;
+  }
+
+  .program-portrait {
+    display: flex;
+  }
+
+  .pastille {
+    width: 7%;
+  }
+
+}
+
+/* landscape */
+
+@media (orientation: landscape) {
+
+  .program-landscape {
+    display: flex;
+  }
+
+  .program-portrait {
+    display: none;
+  }
+
+}
+/* =========================================
+   RESPONSIVE MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .site-header {
+    justify-content: flex-start;
+    padding-left: 80px;
+  }
+
+  .site-title {
+    text-align: left;
+    font-size: 1rem;
+  }
+
+}
+
+/* =========================================
+   MENU MOBILE
 ========================================= */
 
 @media (max-width: 768px) {
@@ -184,7 +294,7 @@ body {
     top: 70px;
     right: 0;
     width: 100%;
-    background: rgba(212,197,255,0.98);
+    background: rgba(244, 212, 143, 0.98);
     padding: 1rem 0;
     text-align: center;
   }
@@ -197,9 +307,41 @@ body {
     display: block;
   }
 
-  .hero-logo {
-    width: 520px;
+}
+@media (max-width: 768px) {
+
+  .main-menu {
+    display: none;
   }
 
+  .hamburger {
+    display: block;
+  }
 
+}
+/* =========================================
+   FLECHE RETOUR
+========================================= */
+
+.back-arrow {
+  position: fixed;
+  top: 20px;
+  left: 40px;
+  font-size: 28px;
+  text-decoration: none;
+  color: #fbfbfb;
+  z-index: 2000;
+  font-weight: bold;
+}
+
+.back-arrow:hover {
+  opacity: 0.6;
+}
+
+/* =========================================
+   FOND PAGE PROGRAMMATION
+========================================= */
+
+.page-programmation {
+  background-color: #001f3d;
 }
