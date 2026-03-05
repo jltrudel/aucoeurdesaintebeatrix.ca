@@ -4,7 +4,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap');
 
 /* =========================================
    BASE
@@ -130,8 +130,9 @@ body {
 
 .item-subtitle {
   font-family: 'Anton', sans-serif;
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.9rem;
+  margin-bottom: 1.1rem;
+   line-height: 1.3rem;
   color: #e94b3c;
 }
 
@@ -234,13 +235,7 @@ body {
    FOOTER
 ========================================= */
 
-.footer-programmation {
-  background:#e94b3c;
-  color:white;
-  padding:2rem;
-  text-align:centerleft;
-  font-size: .8rem;
-}
+
 
 /* =========================================
    ORIENTATION
