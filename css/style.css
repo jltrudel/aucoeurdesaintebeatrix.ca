@@ -125,10 +125,13 @@ body {
   font-size: .7rem;
   margin: 8rem auto;
   padding: 0 2rem;
-  position: absolute;
-  left: 10px;
-  margin-top: 640px;
+  
+  right: 0px;
+  margin-top: 730px;
   color: #406cd0;
+  position: absolute;
+  bottom: -100px;
+  right: 40px;
 }
 
 
@@ -379,16 +382,14 @@ body {
 
 .liens-externes {
   position: absolute;
-  
-  left: 5px;
-  margin-top:80px;
-  z-index: 2000;
-}
+  bottom: 80px;
+  right: 20px;
 
-.icone-lien {
-  max-width: 70%;
-  width: 70px;
-  margin-left: 35px;
-  margin-top:600px;
-  z-index: 2000;
+  display: flex;
+  align-items: center;   /* aligne verticalement */
+  gap: 72px;             /* espace entre les logos */
+}
+.liens-externes img {
+  width: 40px;
+  height: auto;
 }
